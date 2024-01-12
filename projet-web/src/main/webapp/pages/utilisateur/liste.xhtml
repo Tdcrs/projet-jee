@@ -1,0 +1,89 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+     xmlns:h="http://xmlns.jcp.org/jsf/html"
+     xmlns:f="http://xmlns.jcp.org/jsf/core"
+     xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+     template="/template/page-standard.xhtml">
+
+    <ui:define name="titre">Liste des utilisateurs</ui:define>
+
+    <ui:define name="contenu">
+        <h:form>
+
+            <h:dataTable styleClass="liste" 
+                value="#{gestionnaire.listeUtilisateurs}" var="utilisateur"
+                rowClasses="impair, pair" columnClasses="left, left, center, center, center, center, center, center"
+            >
+                <h:column>
+                    <f:facet name="header">
+                        <h:outputText value="Nom" />
+                    </f:facet>
+                    #{utilisateur.nom}
+                </h:column>
+
+                <h:column>
+                    <f:facet name="header">
+                        <h:outputText value="Prénom" />
+                    </f:facet>
+                    #{utilisateur.prenom}
+                </h:column>
+
+                <h:column>
+                    <f:facet name="header">
+                        <h:outputText value="Email" />
+                    </f:facet>
+                    #{utilisateur.email}
+                </h:column>
+
+                <h:column>
+                    <f:facet name="header">
+                        <h:outputText value="Pseudo" />
+                    </f:facet>
+                    #{utilisateur.pseudo}
+                </h:column>
+
+                <h:column>
+                    <f:facet name="header">
+                        <h:outputText value="Rôle" />
+                    </f:facet>
+                    #{utilisateur.role}
+                </h:column>
+
+                <h:column>
+                    <f:facet name="header">
+                        <h:outputText value="Crédit" />
+                    </f:facet>
+                    #{utilisateur.credit}
+                </h:column>
+
+                <h:column>
+                    <f:facet name="header">
+                        <h:outputText value="Actions" />
+                    </f:facet>
+                    <!-- Ajoutez ici les boutons d'action pour modifier et supprimer l'utilisateur -->
+                    <h:button
+                        outcome="formulaireUtilisateur?id=#{utilisateur.id}"
+                        image="#{resource['images:modifier.png']}"
+                        title="Modifier" 
+                        styleClass="image-action"
+                    />
+                    <h:commandButton action="#{gestionnaire.supprimerUtilisateur(utilisateur)}" 
+                        value="Supprimer" 
+                        onclick="return confirm('Confirmez-vous la suppression ?')" 
+                        image="#{resource['images:supprimer.png']}" 
+                        title="Supprimer"
+                        styleClass="image-action"
+                    >
+                        <f:ajax render="@form" execute="@form" />                
+                    </h:commandButton>
+                </h:column>
+                
+            </h:dataTable>
+
+            <br />
+            <h:button value="Ajouter" outcome="formulaireUtilisateur" />
+
+        </h:form>
+    </ui:define>
+
+</ui:composition>

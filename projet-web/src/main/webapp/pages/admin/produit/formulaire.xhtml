@@ -1,0 +1,86 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<ui:composition template="/template/page-standard.xhtml"
+     xmlns="http://www.w3.org/1999/xhtml"
+     xmlns:h="http://java.sun.com/jsf/html"
+     xmlns:f="http://java.sun.com/jsf/core"
+     xmlns:ui="http://java.sun.com/jsf/facelets">
+
+	<f:metadata>
+		<f:viewParam name="id" value="#{modelProduit.courant.id}" />
+		<f:viewAction action="#{modelProduit.actualiserCourant()}" />
+	</f:metadata>
+
+	<ui:define name="titre">Produit</ui:define>
+
+	<ui:define name="contenu">
+
+		<h:form>
+			<table class="form">
+				<tr>
+					<td>
+						<h:outputLabel for="nom">Nom :</h:outputLabel>
+					</td>
+					<td>
+						<h:inputText id="nom" size="25" 
+							value="#{modelProduit.courant.nom}" />
+						<br /><h:message for="nom" errorClass="error"/>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<h:outputLabel for="photo">Photo :</h:outputLabel>
+					</td>
+					<td>
+						<!-- Ajoutez ici un composant pour charger la photo -->
+						<br /><h:message for="photo" errorClass="error"/>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<h:outputLabel for="description">Description :</h:outputLabel>
+					</td>
+					<td>
+						<h:inputTextarea id="description" rows="5" cols="40" 
+							value="#{modelProduit.courant.description}" />
+						<br /><h:message for="description" errorClass="error"/>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<h:outputLabel for="prixMinimal">Prix minimal :</h:outputLabel>
+					</td>
+					<td>
+						<h:inputText id="prixMinimal" size="10" 
+							value="#{modelProduit.courant.prixMinimal}" />
+						<br /><h:message for="prixMinimal" errorClass="error"/>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<h:outputLabel for="dateDebutEncheres">Date de début des enchères :</h:outputLabel>
+					</td>
+					<td>
+						<!-- Ajoutez ici un composant pour la date de début des enchères -->
+						<br /><h:message for="dateDebutEncheres" errorClass="error"/>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<h:outputLabel for="dateFinEncheres">Date de fin des enchères :</h:outputLabel>
+					</td>
+					<td>
+						<!-- Ajoutez ici un composant pour la date de fin des enchères -->
+						<br /><h:message for="dateFinEncheres" errorClass="error"/>
+					</td>
+				</tr>
+			</table>
+
+			<br /> 
+			<h:commandButton value="Valider" 
+				action="#{modelProduit.validerMiseAJour()}" />
+			<h:button value="Retour" outcome="produits" />
+		</h:form>
+
+	</ui:define>
+
+</ui:composition>

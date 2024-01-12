@@ -1,0 +1,90 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+     xmlns:h="http://java.sun.com/jsf/html"
+     xmlns:f="http://java.sun.com/jsf/core"
+     xmlns:ui="http://java.sun.com/jsf/facelets"
+     template="/template/page-standard.xhtml" >
+
+     <ui:define name="titre">Liste des produits</ui:define>
+
+    <ui:define name="contenu">
+
+	<h:form>
+
+		<h:dataTable styleClass="liste" 
+			value="#{modelProduit.liste}" var="produit" 
+			rowClasses="impair, pair" columnClasses="left, left, center, center, center, center, center, center"
+		>
+			<h:column>
+				<f:facet name="header">
+					<h:outputText value="Nom" />
+				</f:facet>
+				#{produit.nom}
+			</h:column>
+			
+			<h:column>
+				<f:facet name="header">
+					<h:outputText value="Photo" />
+				</f:facet>
+				<!-- Ajoutez ici un composant pour afficher la photo du produit -->
+			</h:column>
+			
+			<h:column>
+				<f:facet name="header">
+					<h:outputText value="Description" />
+				</f:facet>
+				#{produit.description}
+			</h:column>
+			
+			<h:column>
+				<f:facet name="header">
+					<h:outputText value="Prix Minimal" />
+				</f:facet>
+				#{produit.prixMinimal}
+			</h:column>
+			
+			<h:column>
+				<f:facet name="header">
+					<h:outputText value="Début Enchères" />
+				</f:facet>
+				<!-- Ajoutez ici un composant pour afficher la date de début des enchères -->
+			</h:column>
+			
+			<h:column>
+				<f:facet name="header">
+					<h:outputText value="Fin Enchères" />
+				</f:facet>
+				<!-- Ajoutez ici un composant pour afficher la date de fin des enchères -->
+			</h:column>
+
+			<h:column>
+				<f:facet name="header">
+					<h:outputText value="Actions" />
+				</f:facet>
+				<h:button
+					outcome="formulaire?id=#{produit.id}"
+					image="#{resource['images:modifier.png']}"
+					title="Modifier" 
+					styleClass="image-action"
+				/>
+				<h:commandButton action="#{modelProduit.supprimer(produit)}" 
+					value="Supprimer" 
+					onclick="return confirm('Confirmez-vous la suppression ?')" 
+					image="#{resource['images:supprimer.png']}" 
+					title="Supprimer"
+					styleClass="image-action"
+				>
+					<f:ajax render="@form" execute="@form" />				
+				</h:commandButton>
+			</h:column>
+			
+		</h:dataTable>
+		
+		<br />
+		<h:button value="Ajouter" outcome="formulaire" />
+
+	</h:form>
+
+	</ui:define>
+
+</ui:composition>
