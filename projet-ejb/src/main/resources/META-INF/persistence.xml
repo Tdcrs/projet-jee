@@ -24,9 +24,10 @@
       <!-- If you are running in a production environment, add a managed
          data source, this configuration uses the JakartaEE default data source is just for development and testing! -->
       <jta-data-source>java:/ds/projet</jta-data-source>
+      
+      <class>projet.ejb.data.Mouvement</class>
+      <class>projet.ejb.data.Produit</class>
       <class>projet.ejb.data.Utilisateur</class>
-        <class>projet.ejb.data.Produit</class>
-        <class>projet.ejb.data.Mouvement</class>
        
       <properties>
        

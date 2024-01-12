@@ -2,6 +2,7 @@ package projet.ejb.data;
 
 import static javax.persistence.GenerationType.IDENTITY;
 
+import java.security.Timestamp;
 import java.util.Date;
 
 import javax.persistence.Column;
@@ -37,13 +38,13 @@ public class Produit {
     private Date dateDebut;
     
     @Column(name = "heureDebut")
-    private int heureDebut; 
+    private Timestamp heureDebut; 
 
     @Column(name = "dateFin")
     private Date dateFin;
     
     @Column(name = "heureFin")
-    private int heureFin; 
+    private Timestamp heureFin; 
 
     @Column(name = "vente_cloturee")
     private boolean venteCloturee;
@@ -54,7 +55,7 @@ public class Produit {
     }
 
     public Produit(int id, String nom, String photo, String description, double prixMinimal, Date dateDebut, 
-            Date dateFin, boolean venteCloturee) {
+            Date dateFin, boolean venteCloturee, Timestamp heureDebut, Timestamp heureFin ) {
         this.id = id;
         this.nom = nom;
         this.photo = photo;
@@ -63,23 +64,25 @@ public class Produit {
         this.dateDebut = dateDebut;
         this.dateFin = dateFin;
         this.venteCloturee = venteCloturee;
+        this.heureDebut = heureDebut; 
+        this.heureFin = heureFin; 
     }
 
     // Getters & setters
 
-    public int getHeureDebut() {
+    public Timestamp getHeureDebut() {
 		return heureDebut;
 	}
 
-	public void setHeureDebut(int heureDebut) {
+	public void setHeureDebut(Timestamp heureDebut) {
 		this.heureDebut = heureDebut;
 	}
 
-	public int getHeureFin() {
+	public Timestamp getHeureFin() {
 		return heureFin;
 	}
 
-	public void setHeureFin(int heureFin) {
+	public void setHeureFin(Timestamp heureFin) {
 		this.heureFin = heureFin;
 	}
 
