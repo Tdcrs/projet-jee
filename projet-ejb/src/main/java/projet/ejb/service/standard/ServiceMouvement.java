@@ -1,7 +1,5 @@
 package projet.ejb.service.standard;
 
-import java.util.List;
-
 import javax.inject.Inject;
 
 import projet.commun.dto.DtoMouvement;
@@ -32,3 +30,4 @@ public DtoMouvement obtenirMouvementParId(int id) {
 }
 
 }
+ 
