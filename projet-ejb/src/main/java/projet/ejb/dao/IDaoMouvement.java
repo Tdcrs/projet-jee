@@ -17,5 +17,7 @@ public interface IDaoMouvement{
 
     void supprimerMouvement(int id);
 
+	Mouvement obtenirMouvementParIddao(int id);
+
     // Ajoutez d'autres méthodes pour les opérations de DAO liées à Mouvement
 }

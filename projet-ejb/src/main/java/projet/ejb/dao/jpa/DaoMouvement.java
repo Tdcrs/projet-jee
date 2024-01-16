@@ -17,7 +17,7 @@ public class DaoMouvement {
         return mouvement;
     }
 
-    public Mouvement obtenirMouvementParId(int id) {
+    public Mouvement obtenirMouvementParIddao(int id) {
         return entityManager.find(Mouvement.class, id);
     }
 

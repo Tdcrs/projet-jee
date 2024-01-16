@@ -1,20 +1,16 @@
 package projet.ejb.dao;
 
 import projet.commun.dto.DtoUtilisateur;
+import projet.ejb.data.Utilisateur;
 
 import java.util.List;
 
 public interface IDaoUtilisateur {
 
-    DtoUtilisateur creerEtEnregistrerUtilisateur(DtoUtilisateur utilisateurDto);
+    Utilisateur creerEtEnregistrerUtilisateur(Utilisateur utilisateur);
 
-    DtoUtilisateur obtenirUtilisateurParId(int id);
+    Utilisateur obtenirUtilisateurParId(int id);
 
-    List<DtoUtilisateur> listeUtilisateurs();
-
-    void mettreAJourUtilisateur(DtoUtilisateur utilisateurDto);
-
-    void supprimerUtilisateur(int id);
 
     // Ajoutez d'autres méthodes pour les opérations de DAO liées à Utilisateur
 }

@@ -18,30 +18,17 @@ private IMapperEjb mapper;
 @Inject
 private IDaoMouvement daoMouvement;
 
-	@Override
-	public DtoMouvement creerEtEnregistrerMouvement(DtoMouvement mouvementDto) {
-		// TODO Auto-generated method stub
+@Override
+public DtoMouvement creerEtEnregistrerMouvement(DtoMouvement mouvementDto) {
+    Mouvement mouvement = mapper.map(mouvementDto);
+    mouvement = daoMouvement.creerEtEnregistrerMouvement(mouvement);
+    return mapper.map(mouvement);
+}
 
-        Mouvement mouvement = mapper.map(mouvementDto);
-        mouvement = daoMouvement.creerEtEnregistrerMouvement(mouvement);
-        return mapper.map(mouvement);
-	}
-
-	@Override
-	public DtoMouvement obtenirMouvementParId(int id) {
-		// TODO Auto-generated method stub
-
-        return mapper.map(daoMouvement.obtenirMouvementParId(id));
-
-		return null;
-	}
-
-	@Override
-	public List<DtoMouvement> listeMouvements() {
-		// TODO Auto-generated method stub
-            
-            return mapper.map(daoMouvement.rechercherTout());
-		return null;
-	}
+@Override
+public DtoMouvement obtenirMouvementParId(int id) {
+    Mouvement mouvement = daoMouvement.obtenirMouvementParIddao(id);
+    return mapper.map(mouvement);
+}
 
 }

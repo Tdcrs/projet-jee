@@ -12,7 +12,7 @@ public class DaoUtilisateur {
     @PersistenceContext
     private EntityManager entityManager;
 
-    public Utilisateur creerUtilisateur(Utilisateur utilisateur) {
+    public Utilisateur creerEtEnregistrerUtilisateur(Utilisateur utilisateur) {
         entityManager.persist(utilisateur);
         return utilisateur;
     }

@@ -10,7 +10,7 @@ public interface IServiceMouvement {
 
     DtoMouvement obtenirMouvementParId(int id);
 
-    List<DtoMouvement> listeMouvements();
+    //List<DtoMouvement> listeMouvements();
 
     // Ajoutez d'autres méthodes pour les opérations métier liées à Mouvement
 }
