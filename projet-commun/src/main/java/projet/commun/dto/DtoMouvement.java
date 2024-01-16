@@ -10,7 +10,8 @@ public class DtoMouvement implements Serializable {
     private int id;
     private int idUtilisateur;
     private int idProduit;
-    private Date dateMouvement;
+    private Date date_heure; 
+    private String type; 
     private double montant;
     
     
@@ -32,11 +33,17 @@ public class DtoMouvement implements Serializable {
 	public void setIdProduit(int idProduit) {
 		this.idProduit = idProduit;
 	}
-	public Date getDateMouvement() {
-		return dateMouvement;
+	public Date getDate_heure() {
+		return date_heure;
 	}
-	public void setDateMouvement(Date dateMouvement) {
-		this.dateMouvement = dateMouvement;
+	public void setDate_heure(Date date_heure) {
+		this.date_heure = date_heure;
+	}
+	public String getType() {
+		return type;
+	}
+	public void setType(String type) {
+		this.type = type;
 	}
 	public double getMontant() {
 		return montant;
@@ -44,6 +51,9 @@ public class DtoMouvement implements Serializable {
 	public void setMontant(double montant) {
 		this.montant = montant;
 	}
+    
+    
+
 
     // Ajoutez d'autres champs selon les besoins
 
