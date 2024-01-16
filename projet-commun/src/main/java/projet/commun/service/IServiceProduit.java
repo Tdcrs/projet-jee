@@ -7,7 +7,7 @@ public interface IServiceProduit {
 	DtoProduit creerProduit(DtoProduit produit);
 
     DtoProduit obtenirProduitParId(int id);
-   
+    
 
     // Ajoutez d'autres méthodes pour les opérations métier liées à Produit
 }

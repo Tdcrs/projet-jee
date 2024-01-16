@@ -11,6 +11,6 @@ public interface IDaoUtilisateur {
 
     Utilisateur obtenirUtilisateurParId(int id);
 
-
+ 
     // Ajoutez d'autres méthodes pour les opérations de DAO liées à Utilisateur
 }

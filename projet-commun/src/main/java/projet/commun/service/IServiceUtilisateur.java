@@ -7,7 +7,7 @@ public interface IServiceUtilisateur {
     DtoUtilisateur creerEtEnregistrerUtilisateur(DtoUtilisateur utilisateurDTO);
 
     DtoUtilisateur obtenirUtilisateurParId(int id);
-
+ 
 
     // Ajoutez d'autres méthodes pour les opérations métier liées à Utilisateur
 }

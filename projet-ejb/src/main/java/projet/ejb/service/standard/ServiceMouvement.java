@@ -25,7 +25,7 @@ public DtoMouvement creerEtEnregistrerMouvement(DtoMouvement mouvementDto) {
 
 @Override
 public DtoMouvement obtenirMouvementParId(int id) {
-    Mouvement mouvement = daoMouvement.obtenirMouvementParIddao(id);
+    Mouvement mouvement = daoMouvement.obtenirMouvementParId(id);
     return mapper.map(mouvement);
 }
 

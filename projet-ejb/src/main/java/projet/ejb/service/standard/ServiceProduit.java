@@ -35,7 +35,7 @@ public class ServiceProduit implements IServiceProduit {
         
         // Mapper l'entité résultante en DTO
         return mapper.map(produitEntity);
-	}
+	} 
 
 
 }
