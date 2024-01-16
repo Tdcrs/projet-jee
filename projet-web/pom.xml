@@ -126,6 +126,11 @@
 			<artifactId>projet-commun</artifactId>
 			<scope>provided</scope>
 		</dependency>
+		        <dependency>
+		        <groupId>${project.groupId}</groupId>
+			<artifactId>projet-ejb</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
 
     </dependencies>
 

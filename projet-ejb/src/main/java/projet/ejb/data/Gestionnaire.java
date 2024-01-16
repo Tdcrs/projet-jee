@@ -34,10 +34,11 @@ public class Gestionnaire extends Utilisateur {
         entityManager.remove(entityManager.merge(utilisateur));
     }
 
-    public List<Mouvement> getMouvementsUtilisateur(Utilisateur utilisateur ) {
-        // Logique pour obtenir la liste des mouvements liés à un utilisateur
-        // Utilisez des requêtes JPA pour récupérer les mouvements associés à l'utilisateur
-        // Retournez la liste de mouvements
+    public List<Mouvement> getMouvementsUtilisateur(Utilisateur utilisateur) {
+        String jpql = "SELECT m FROM Mouvement m WHERE m.utilisateur = :utilisateur";
+        TypedQuery<Mouvement> query = entityManager.createQuery(jpql, Mouvement.class);
+        query.setParameter("utilisateur", utilisateur);
+        return query.getResultList();
     }
 
     // Autres méthodes spécifiques au rôle du gestionnaire...

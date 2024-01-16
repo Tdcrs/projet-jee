@@ -12,5 +12,17 @@ public interface IServiceProduit {
 
     List<DtoProduit> listeProduits();
 
+	DtoProduit produitModifier(DtoProduit dto);
+
+	void produitSupprimer(Long id);
+
+	DtoProduit produitCreer(DtoProduit dto);
+
+	DtoProduit produitRechercherParId(Long id);
+
+	List<DtoProduit> produitRechercherParCompteId(Long compteId);
+
+	List<DtoProduit> produitRechercherTout();
+
     // Ajoutez d'autres méthodes pour les opérations métier liées à Produit
 }

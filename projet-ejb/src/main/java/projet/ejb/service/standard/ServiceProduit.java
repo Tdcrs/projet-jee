@@ -1,11 +1,21 @@
 package projet.ejb.service.standard;
 
+import java.util.List;
+
+import javax.inject.Inject;
+
+import projet.commun.dto.DtoProduit;
+import projet.commun.service.IServiceProduit;
+import projet.ejb.dao.IDaoProduit;
+import projet.ejb.data.Produit;
+import projet.ejb.data.mapper.IMapperEjb;
+
 public class ServiceProduit implements IServiceProduit {
 
     // Champs
-    @inject
+    @Inject
     private IMapperEjb mapper;
-    @inject
+    @Inject
     private IDaoProduit daoProduit;
     // Actions
     @Override
@@ -41,5 +51,23 @@ public class ServiceProduit implements IServiceProduit {
         produit = daoProduit.modifier(produit);
         return mapper.map(produit);
     }
+
+	@Override
+	public DtoProduit creerEtEnregistrerProduit(DtoProduit produitDto) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public DtoProduit obtenirProduitParId(int id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<DtoProduit> listeProduits() {
+		// TODO Auto-generated method stub
+		return null;
+	}
 
 }

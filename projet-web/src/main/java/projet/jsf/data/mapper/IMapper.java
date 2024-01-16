@@ -4,10 +4,12 @@ import org.mapstruct.Mapper;
 import org.mapstruct.MappingTarget;
 
 import projet.commun.dto.DtoCompte;
+import projet.commun.dto.DtoMouvement;
+import projet.commun.dto.DtoProduit;
+import projet.commun.dto.DtoUtilisateur;
+import projet.ejb.data.Mouvement;
 import projet.ejb.data.Produit;
 import projet.ejb.data.Utilisateur;
-import projet.ejb.data.mapper.DtoProduit;
-import projet.ejb.data.mapper.DtoUtilisateur;
 import projet.jsf.data.Compte;
 
 @Mapper(componentModel = "cdi")
