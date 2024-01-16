@@ -34,7 +34,7 @@ public class Gestionnaire extends Utilisateur {
         entityManager.remove(entityManager.merge(utilisateur));
     }
 
-    public List<Movement> getMouvementsUtilisateur(Utilisateur utilisateur) {
+    public List<Mouvement> getMouvementsUtilisateur(Utilisateur utilisateur ) {
         // Logique pour obtenir la liste des mouvements liés à un utilisateur
         // Utilisez des requêtes JPA pour récupérer les mouvements associés à l'utilisateur
         // Retournez la liste de mouvements

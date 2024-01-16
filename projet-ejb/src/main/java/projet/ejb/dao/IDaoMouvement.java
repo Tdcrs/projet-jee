@@ -1,12 +1,13 @@
 package projet.ejb.dao;
 
 import projet.commun.dto.DtoMouvement;
+import projet.ejb.data.Mouvement;
 
 import java.util.List;
 
 public interface IDaoMouvement{
 
-    DtoMouvement creerEtEnregistrerMouvement(DtoMouvement mouvementDto);
+    Mouvement creerEtEnregistrerMouvement(Mouvement mouvementDto);
 
     DtoMouvement obtenirMouvementParId(int id);
 
