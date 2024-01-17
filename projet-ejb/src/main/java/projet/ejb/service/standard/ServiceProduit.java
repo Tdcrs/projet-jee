@@ -35,6 +35,36 @@ public class ServiceProduit implements IServiceProduit {
         
         // Mapper l'entité résultante en DTO
         return mapper.map(produitEntity);
+	}
+
+	@Override
+	public DtoProduit[] listerTout() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public DtoProduit retrouver(Integer id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void supprimer(Integer id) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void inserer(DtoProduit map) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void modifier(DtoProduit map) {
+		// TODO Auto-generated method stub
+		
 	} 
 
 
