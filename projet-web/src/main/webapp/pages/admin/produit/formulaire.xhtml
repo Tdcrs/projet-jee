@@ -10,7 +10,7 @@
 		<f:viewAction action="#{modelProduit.actualiserCourant()}" />
 	</f:metadata>
 
-	<ui:define name="titre">Produit</ui:define>
+	<ui:define name="titre">Formulaire de Produit</ui:define>
 
 	<ui:define name="contenu">
 
@@ -24,15 +24,6 @@
 						<h:inputText id="nom" size="25" 
 							value="#{modelProduit.courant.nom}" />
 						<br /><h:message for="nom" errorClass="error"/>
-					</td>
-				</tr>
-				<tr>
-					<td>
-						<h:outputLabel for="photo">Photo :</h:outputLabel>
-					</td>
-					<td>
-						<!-- Ajoutez ici un composant pour charger la photo -->
-						<br /><h:message for="photo" errorClass="error"/>
 					</td>
 				</tr>
 				<tr>
@@ -66,11 +57,29 @@
 				</tr>
 				<tr>
 					<td>
+						<h:outputLabel for="HeureDebutEncheres">Heure de début des enchères :</h:outputLabel>
+					</td>
+					<td>
+						<!-- Ajoutez ici un composant pour la date de début des enchères -->
+						<br /><h:message for="HeureDebutEncheres" errorClass="error"/>
+					</td>
+				</tr>
+				<tr>
+					<td>
 						<h:outputLabel for="dateFinEncheres">Date de fin des enchères :</h:outputLabel>
 					</td>
 					<td>
 						<!-- Ajoutez ici un composant pour la date de fin des enchères -->
 						<br /><h:message for="dateFinEncheres" errorClass="error"/>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<h:outputLabel for="heureFinEncheres"> Heure de fin des enchères :</h:outputLabel>
+					</td>
+					<td>
+						<!-- Ajoutez ici un composant pour la date de début des enchères -->
+						<br /><h:message for="heureFinEncheres" errorClass="error"/>
 					</td>
 				</tr>
 			</table>
