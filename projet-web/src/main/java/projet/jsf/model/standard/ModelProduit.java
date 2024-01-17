@@ -10,7 +10,7 @@ import javax.inject.Inject;
 import javax.inject.Named;
 
 import projet.commun.dto.DtoProduit;
-import projet.commun.exception.ExceptionValidation;
+
 import projet.commun.service.IServiceProduit;
 import projet.jsf.data.Produit;
 import projet.jsf.data.mapper.IMapper;

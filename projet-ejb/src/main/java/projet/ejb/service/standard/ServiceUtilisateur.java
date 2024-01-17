@@ -1,5 +1,7 @@
 package projet.ejb.service.standard;
 
+import java.util.List;
+
 import javax.inject.Inject;
 
 import projet.commun.dto.DtoUtilisateur;
@@ -28,6 +30,26 @@ public class ServiceUtilisateur implements IServiceUtilisateur {
    
         return mapper.map(utilisateurEntity);
     }
+	@Override
+	public List<DtoUtilisateur> listerTout() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	@Override
+	public void inserer(DtoUtilisateur map) {
+		// TODO Auto-generated method stub
+		
+	}
+	@Override
+	public void modifier(DtoUtilisateur map) {
+		// TODO Auto-generated method stub
+		
+	}
+	@Override
+	public void supprimer(int id) {
+		// TODO Auto-generated method stub
+		
+	}
     
 
 }

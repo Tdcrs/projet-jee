@@ -24,6 +24,10 @@ public class Utilisateur implements Serializable {
 	private double credit;
 
 	// Constructeurs, getters et setters
+	
+	public Utilisateur() {
+		
+	}
 
 	public Utilisateur(int id, String nom, String prenom, String adresseEmail, String pseudo, String motDePasse,
 			String role, double credit) {
