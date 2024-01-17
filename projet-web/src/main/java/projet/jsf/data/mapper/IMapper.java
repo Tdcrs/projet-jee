@@ -7,9 +7,9 @@ import projet.commun.dto.DtoCompte;
 import projet.commun.dto.DtoMouvement;
 import projet.commun.dto.DtoProduit;
 import projet.commun.dto.DtoUtilisateur;
-import projet.ejb.data.Mouvement;
-import projet.ejb.data.Produit;
-import projet.ejb.data.Utilisateur;
+import projet.jsf.data.Mouvement;
+import projet.jsf.data.Produit;
+import projet.jsf.data.Utilisateur;
 import projet.jsf.data.Compte;
 
 @Mapper(componentModel = "cdi")
@@ -36,4 +36,5 @@ public interface IMapper {
 	Produit map(DtoProduit source);
 
 	DtoProduit map(Produit source);
+
 }
